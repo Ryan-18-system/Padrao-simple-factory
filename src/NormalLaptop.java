@@ -1,10 +1,14 @@
 
-public class NormalLaptop implements Laptop {
+public class NormalLaptop extends LapTopAbstract  {
 
-	@Override
-	public void runTests() {
-		System.out.println("Executando os testes em um Normal Laptop");
 
-	}
+    @Override
+    protected String getMarca() {
+        return this.marca;
+    }
 
+    @Override
+    protected void runTestes() {
+        System.out.printf("VRUMMMMMMMMM TESTE Normal LapTop\n");
+    }
 }

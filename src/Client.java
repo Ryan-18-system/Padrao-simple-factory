@@ -3,20 +3,20 @@ public class Client {
 
 	public static void main(String[] args) {
 		LaptopSimpleFactory laptopFactory = new LaptopSimpleFactory();
+
+		LapTopAbstract myLaptop = laptopFactory.createLaptop("gaming");
 		
-		Laptop myLaptop = laptopFactory.createLaptop("GamingLaptop");
+		myLaptop.runTestes();
 		
-		myLaptop.runTests();
-		
-		myLaptop = laptopFactory.createLaptop("NormalLaptop");
-		myLaptop.runTests();
+		myLaptop = laptopFactory.createLaptop("normal");
+		myLaptop.runTestes();
 
 		
-		myLaptop = laptopFactory.createLaptop("ProfessionalLaptop");
-		myLaptop.runTests();
+		myLaptop = laptopFactory.createLaptop("profissional");
+		myLaptop.runTestes();
 		
-		myLaptop = laptopFactory.createLaptop("TurbolLaptop");
-		myLaptop.runTests();
+		myLaptop = laptopFactory.createLaptop("");
+		myLaptop.runTestes();
 	}
 
 }

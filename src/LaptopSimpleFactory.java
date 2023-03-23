@@ -1,21 +1,17 @@
 
 public class LaptopSimpleFactory {
 	
-	public Laptop createLaptop(String laptopType) {
-		if (laptopType == null )
-			return null;
-		
-		laptopType = laptopType.toUpperCase();
+	public LapTopAbstract createLaptop(String laptopType) {
 
-		if (laptopType.equalsIgnoreCase("NormalLaptop"))
+
+		if (laptopType.equalsIgnoreCase("normal")) {
 			return new NormalLaptop();
-		
-		else if (laptopType.equalsIgnoreCase("GamingLaptop"))
+		} else if (laptopType.equalsIgnoreCase("gaming"))
 			return new GamingLaptop();
-		else if (laptopType.equalsIgnoreCase("ProfessionalLaptop"))
+		else if (laptopType.equalsIgnoreCase("profissional"))
 			return new ProfessionalLaptop();
 		else
-			return null;
+			return new LapTopNull();
 		
 	}
 }

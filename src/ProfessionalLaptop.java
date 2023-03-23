@@ -1,9 +1,14 @@
 
-public class ProfessionalLaptop implements Laptop {
+public class ProfessionalLaptop extends LapTopAbstract {
 
-	@Override
-	public void runTests() {
-		System.out.println("Rodando testes em um Professional Laptop");
-	}
 
+    @Override
+    protected String getMarca() {
+        return this.marca;
+    }
+
+    @Override
+    protected void runTestes() {
+        System.out.printf("VRUMMMMMMMMM TESTE Profissional LapTop\n");
+    }
 }

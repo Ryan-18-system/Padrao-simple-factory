@@ -1,10 +1,14 @@
 
-public class GamingLaptop implements Laptop {
+public class GamingLaptop extends LapTopAbstract{
 
-	@Override
-	public void runTests() {
-		System.out.println("Executando os tetes em um Gaming Laptop");
 
-	}
+    @Override
+    protected String getMarca() {
+        return this.marca;
+    }
 
+    @Override
+    protected void runTestes() {
+        System.out.printf("VRUMMMMMMMMM TESTE Gaming LapTop\n");
+    }
 }
