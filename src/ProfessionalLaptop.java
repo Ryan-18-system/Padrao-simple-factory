@@ -2,10 +2,6 @@
 public class ProfessionalLaptop extends LapTopAbstract {
 
 
-    @Override
-    protected String getMarca() {
-        return this.marca;
-    }
 
     @Override
     protected void runTestes() {
